@@ -6,6 +6,46 @@ body {
 	margin: 0;
 	padding: 0;
 }
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center; /* Centraliza a coluna dentro da linha */
+  }
+  
+  .row {
+	display: flex;
+	justify-content: center;
+  }
+  
+  .col {
+	max-width: 200px; /* Largura máxima da coluna */
+	text-align: center; /* Centraliza o texto */
+  }
+  
+  .navbar-nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .navbar-nav li {
+	margin: 10px 0;
+  }
+  
+  .navbar-nav li a {
+	color: #1100ff;
+	font-weight: bold;
+	text-decoration: none;
+  }
+  
+  .navbar-nav li a:hover {
+	background-color: #2600ff;
+	color: #ffffff;
+	padding: 5px 10px;
+	border-radius: 5px;
+  }
+  
+
 
 #container {
 	width: 90%;
@@ -48,18 +88,18 @@ header {
 	text-transform: uppercase;
 }
 
-nav ul {
+.navbar-nav {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: flex;
 }
 
-nav ul li {
+.navbar-nav .nav-item {
 	margin: 0 15px;
 }
 
-nav ul li a {
+.navbar-nav .nav-link {
 	color: #1100ff;
 	font-weight: bold;
 	padding: 10px 15px;
@@ -67,10 +107,11 @@ nav ul li a {
 	transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
+.navbar-nav .nav-link:hover {
 	background-color: #2600ff;
 	color: #ffffff;
 }
+
 
 /* Conteúdo Principal */
 #conteudo {
@@ -121,29 +162,93 @@ h4 {
 	margin-bottom: 0;
 }
 
-/* Rodapé */
+/* Rodapé Responsivo */
 footer {
-	clear: both;
-	padding: 20px 0;
-	background-color: #b6cee4;
-	color: #000000;
-	text-align: center;
-	margin-top: 20px;
+    clear: both;
+    padding: 20px 0;
+    background-color: #b6cee4;
+    color: #000000;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Lista de navegação do rodapé */
+footer ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens "quebrem" em múltiplas linhas se necessário */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin: 0 10px; /* Espaço entre os itens */
+}
+
+footer ul li a {
+    color: #2f00ff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    background-color: #0011ff;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+/* Ícones de redes sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+/* Links de copyright */
+footer p {
+    margin: 10px 0 0;
+    color: #000000;
+    font-size: 12px;
 }
 
 footer p a {
-	color: #2f00ff;
-	text-decoration: none;
-	margin: 0 10px; /* Espaçamento horizontal entre os links */
-	display: inline-block; /* Garante que os links respeitem o espaçamento */
+    color: #2f00ff;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
 }
 
 footer p a:hover {
-	background-color: #0011ff;
-	color: #ffffff;
-	padding: 2px 8px; /* Adiciona padding ao hover para destacar */
-	border-radius: 3px; /* Bordas arredondadas para um efeito visual mais suave */
+    background-color: #0011ff;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 3px;
 }
+
+/* Ajuste do rodapé para dispositivos móveis */
+@media (max-width: 768px) {
+    footer ul {
+        flex-direction: column; /* Alinha os itens verticalmente em telas pequenas */
+    }
+
+    footer ul li {
+        margin: 5px 0;
+    }
+}
+
+
+
 
 
 /* Formulários */
