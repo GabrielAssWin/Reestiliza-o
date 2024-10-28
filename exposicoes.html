@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exposições - Museu Nacional</title>
+
+	<!-- Normalize CSS -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+	<!-- Estilo customizado -->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<!-- Estilo para o carrossel -->
+	<style>
+		.carousel {
+			position: relative;
+			width: 100%;
+			max-width: 800px; /* largura máxima do carrossel */
+			margin: 0 auto; /* centraliza o carrossel horizontalmente */
+			overflow: hidden;
+		}
+
+		.carousel-inner {
+			display: flex;
+			transition: transform 0.5s ease;
+		}
+
+		.carousel-item {
+			min-width: 100%;
+			box-sizing: border-box;
+		}
+
+		.carousel img {
+			width: 100%; /* a largura das imagens ocupa 100% do contêiner */
+			height: 400px; /* altura fixa para todas as imagens */
+			object-fit: cover; /* preenche o contêiner mantendo a proporção */
+		}
+
+		.carousel-controls {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			transform: translateY(-50%);
+		}
+
+		.carousel-controls button {
+			background-color: rgba(0, 0, 0, 0.5);
+			border: none;
+			color: white;
+			padding: 10px;
+			cursor: pointer;
+		}
+
+		/* Centralizando apenas o carrossel */
+		#conteudo {
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* centraliza o conteúdo do contêiner */
+		}
+
+		/* Mantendo o footer com seu estilo normal */
+		footer {
+			text-align: center; /* centraliza o texto do footer */
+			margin-top: 20px; /* espaço acima do footer */
+		}
+	</style>
+</head>
+<body>
+	<div id="container"><!-- Início container -->
+
+		<header><!-- Início Cabecalho -->
+			<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+			  <div id="container-header">
+				<a href="#" class="navbar-brand" id="logo">
+				  <h1>Museu Nacional</h1>
+				</a>
+				
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+				  <i class="fas fa-bars text-white"></i>
+				</button>
+		  
+				<div class="collapse navbar-collapse" id="nav-principal">
+				  <ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="exposicoes.html" class="nav-link">Exposições</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Pesquisa</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Acervo</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Vídeos</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Fotos</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+		  </header><!--/fim Cabecalho -->
+
+		<main id="principal"><!-- Início principal -->
+
+			<section id="conteudo"><!-- Início conteudo -->
+				<div class="texto_exposicoes">
+					<h2>Exposições</h2>
+				<p>Explore as exposições fascinantes do Museu Nacional. Aqui você encontra informações detalhadas sobre cada exposição, incluindo datas, horários e descrições.</p>
+				</div>
+				<!-- Início do Carrossel -->
+				<div class="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item">
+							<img src="img/insetos.jpg" alt="Exposição Os Assustadores Insetos">
+						</div>
+						<div class="carousel-item">
+							<img src="img/luzia.jpg" alt="Exposição O Crânio de Luzia">
+						</div>
+						<div class="carousel-item">
+							<img src="img/preguica.jpg" alt="Exposição Preguiça Gigante e Tigre Dentes-de-Sabre">
+						</div>
+						<div class="carousel-item">
+							<img src="img/plantas.jpg" alt="Exposição Plantas do Brasil Central">
+						</div>
+						<div class="carousel-item">
+							<img src="img/imperatriz.jpg" alt="Exposição Teresa Cristina: A Imperatriz Arqueóloga">
+						</div>
+					</div>
+					<div class="carousel-controls">
+						<button onclick="prevSlide()">&#10094;</button>
+						<button onclick="nextSlide()">&#10095;</button>
+					</div>
+				</div>
+				<!-- Fim do Carrossel -->
+
+				<section id="exposicoes-lista">
+					<article class="exposicao-item">
+						<h3>Os Assustadores Insetos</h3>
+						<p>Descubra as diversas espécies de insetos, seu papel na natureza e as curiosidades que fazem deles criaturas tão intrigantes.</p>
+					</article>
+
+					<article class="exposicao-item">
+						<h3>O Crânio de Luzia</h3>
+						<p>Aprecie a história do fóssil humano mais antigo encontrado no Brasil e sua importância para a arqueologia nacional.</p>
+					</article>
+
+					<article class="exposicao-item">
+						<h3>Preguiça Gigante e Tigre Dentes-de-Sabre</h3>
+						<p>Volte no tempo e conheça as criaturas que habitavam o Brasil há milhares de anos.</p>
+					</article>
+
+					<article class="exposicao-item">
+						<h3>Plantas do Brasil Central</h3>
+						<p>Explore a rica diversidade da flora brasileira, suas propriedades medicinais e importância ecológica.</p>
+					</article>
+
+					<article class="exposicao-item">
+						<h3>Teresa Cristina: A Imperatriz Arqueóloga</h3>
+						<p>Uma homenagem à imperatriz que trouxe inúmeros artefatos ao Brasil e contribuiu para o enriquecimento cultural do país.</p>
+					</article>
+				</section>
+
+			</section><!--/fim conteudo -->
+
+			<footer> 
+				<div class="footer-content">
+					<ul class="navbar-nav">
+						<li><a href="#">Exposições</a></li>
+						<li><a href="#">Pesquisa</a></li>
+						<li><a href="#">Acervo</a></li>
+						<li><a href="#">Vídeos</a></li>
+						<li><a href="#">Fotos</a></li>
+						<li><a href="#">Contatos</a></li>
+					</ul>
+					<ul class="social-media">
+						<li><a href="#"><img src="img/facebook.png" alt="Facebook"></a></li>
+						<li><a href="#"><img src="img/twitter.png" alt="Twitter"></a></li>
+						<li><a href="https://www.instagram.com/spotify462/"><img src="img/instagram.png" alt="Instagram"></a></li>
+					</ul>
+					<p>2019 <a href="#">Museu Nacional</a> - Todos os direitos reservados.</p>
+				</div>
+			</footer>
+		</main><!--/fim principal -->
+	</div><!--/fim container -->
+
+	<!-- JavaScript para o carrossel -->
+	<script>
+		let currentSlide = 0;
+
+		function showSlide(index) {
+			const slides = document.querySelectorAll('.carousel-item');
+			if (index >= slides.length) currentSlide = 0;
+			if (index < 0) currentSlide = slides.length - 1;
+			slides.forEach((slide) => {
+				slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+			});
+		}
+
+		function nextSlide() {
+			currentSlide++;
+			showSlide(currentSlide);
+		}
+
+		function prevSlide() {
+			currentSlide--;
+			showSlide(currentSlide);
+		}
+	</script>
+</body>
+</html>
