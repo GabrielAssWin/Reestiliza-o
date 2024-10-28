@@ -19,23 +19,32 @@
 
 	<div id="container"><!-- Início container -->
 		
-		<header><!-- Início header -->
-			<div id="logo">
-				<h1><a href="#">Museu Nacional</a></h1>
-			</div>
-
-			<nav><!-- Início nav -->
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Exposições</a></li>
-			        <li><a href="#">Pesquisa</a></li>
-			        <li><a href="#">Acervo</a></li>
-			        <li><a href="#">Vídeos</a></li>
-			        <li><a href="#">Fotos</a></li>
-			        <li><a href="#">Contato</a></li>
-				</ul>
-			</nav><!--/fim nav -->
-		</header><!--/fim header -->
+		<header><!-- Início Cabecalho -->
+			<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+			  <div id="container-header">
+				<a href="#" class="navbar-brand" id="logo">
+				  <h1>Museu Nacional</h1>
+				</a>
+				
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+				  <i class="fas fa-bars text-white"></i>
+				</button>
+		  
+				<div class="collapse navbar-collapse" id="nav-principal">
+				  <ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Exposições</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Pesquisa</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Acervo</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Vídeos</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Fotos</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+		  </header><!--/fim Cabecalho -->
+		  
 
 		<main id="principal"><!-- Início principal -->
 			
@@ -113,18 +122,38 @@
 				</section>
 			</aside><!--/fim aside -->
 
-			<footer>
-				<p>
-					<a href="#">Home</a>
-					<a href="#">Exposições</a>
-					<a href="#">Pesquisa</a>
-					<a href="#">Acervo</a>
-					<a href="#">Vídeos</a>
-					<a href="#">Fotos</a>
-					<a href="#">Contato</a>
-				</p>
-				<p>2019 <a href="#">Museu Nacional</a> - Todos os direitos reservados.</p>
-			</footer>
+			<footer> 
+				<div class="container">
+				  <div class="row">
+					<div class="col">
+						<ul class="navbar-nav">
+						  <li><a href="#">Exposições</a></li>
+						  <li><a href="#">Pesquisa</a></li>
+						  <li><a href="#">Acervo</a></li>
+						  <li><a href="#">Vídeos</a></li>
+						  <li><a href="#">Fotos</a></li>
+						  <li><a href="#">Contatos</a></li>
+						</ul>
+					  </div>
+					
+					<div class="col-md-4">
+					  <ul class="social-media">
+						<li>
+						  <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+						</li>
+						<li>
+						  <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+						</li>
+						<li>
+						  <a href="https://www.instagram.com/spotify462/"><img src="img/instagram.png" alt="Instagram"></a>
+						</li>
+					  </ul>
+					  <p>2019 <a href="#">Museu Nacional</a> - Todos os direitos reservados.</p>
+					</div>
+				  </div>
+				</div>
+			  </footer>
+			  
 		</main><!--/fim principal -->
 	</div><!--/fim container -->
 </body>
